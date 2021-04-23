@@ -23,9 +23,11 @@ const corsOptions = {
     }
   },
 };
+
 app.use(cors(corsOptions));
 app.use("/reviews", reviewsRoute);
 app.use("/media", mediaRoute);
+
 console.log(listEndpoints(app));
 
 app.listen(PORT, () => {
